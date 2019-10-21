@@ -1,6 +1,7 @@
 class JobResponse
     def transform(job)
         return {
+            id: job.id,
             empresa: job.empresa,
             titulo: job.titulo,
             descricao: job.descricao,
