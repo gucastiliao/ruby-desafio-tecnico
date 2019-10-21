@@ -3,7 +3,7 @@ class RankingResponse
         people = []
 
         applications.each do |application|
-            people.push(PeopleResponse.new.transform(application.person, application.score))
+            people.push(PersonResponse.new.transform(application.person, application.score))
         end
 
         return people

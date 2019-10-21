@@ -1,9 +1,9 @@
-class PeopleResponse
+class PersonResponse
     def transform(person, score)
         return {
             nome: person.nome,
             profissao: person.profissao,
-            localizacao: person.localizacao,
+            localizacao: person.localizacao.upcase,
             nivel: person.nivel,
             score: score
         }

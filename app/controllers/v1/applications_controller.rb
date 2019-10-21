@@ -8,7 +8,7 @@ module V1
 
             application = application.save_score(application)
             
-            render json: {status: 'success', data: ApplicationsResponse.new.transform(application)}, status: :ok
+            render json: {status: 'success', data: ApplicationResponse.new.transform(application)}, status: :ok
         end
 
         private
