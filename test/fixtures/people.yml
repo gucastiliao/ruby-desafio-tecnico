@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+person_level_5:
+  nome: John Doez
+  profissao: Engenheiro de Software
+  localizacao: B
+  nivel: 5
+
+person_level_3:
+  nome: John Doez 2
+  profissao: Engenheiro de Software
+  localizacao: B
+  nivel: 3
+
+person_level_5_with_application:
+  nome: John Doez
+  profissao: Engenheiro de Software
+  localizacao: B
+  nivel: 5
+
+person_level_3_with_application:
+  nome: John Doez 2
+  profissao: Engenheiro de Software
+  localizacao: B
+  nivel: 3
