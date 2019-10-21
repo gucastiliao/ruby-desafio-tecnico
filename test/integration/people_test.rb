@@ -16,4 +16,14 @@ class PeopleTest < ActionDispatch::IntegrationTest
         
         assert_response :unprocessable_entity
     end
+
+    test "can create person with invalid location and level" do
+        post "/v1/pessoas",
+        params: { nome: "John Doez", profissao: "Engenheiro de Software", localizacao: "Z", nivel: 10 }
+        json_response = JSON.parse(response.body)
+
+        assert_response :unprocessable_entity
+        assert_not_nil json_response["errors"]["localizacao"]
+        assert_not_nil json_response["errors"]["nivel"]
+    end
 end
