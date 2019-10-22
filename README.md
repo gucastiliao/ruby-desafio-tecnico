@@ -36,13 +36,9 @@ Para rodar os testes é só executar:
 docker-compose exec web rails test
 ```
 
-## Endpoints
+## Formato de Erros
 
---- 
-
-## Erros
-
-## 422 - Unprocessable Entity
+### 422 - Unprocessable Entity
 `POSTs` que estiverem faltando campos obrigatórios irão retornar erro no seguinte formato:
 ```
 {
@@ -56,7 +52,7 @@ docker-compose exec web rails test
 }
 ```
 
-## 404 - Not Found
+### 404 - Not Found
 `GET` que não existir o resource irá retornar no seguinte formato:
 
 ```
@@ -68,9 +64,9 @@ docker-compose exec web rails test
 }
 ```
 
----
+## Endpoints
 
-## Vagas
+### Vagas
 
 Request
 
@@ -106,7 +102,7 @@ Response - Code: `201`
 
 --- 
 
-## Pessoas
+### Pessoas
 
 Request
 
@@ -140,7 +136,7 @@ Response - Code: `201`
 
 --- 
 
-## Registrar Candidatura
+### Registrar Candidatura
 
 Request
 
@@ -186,7 +182,7 @@ Response - Code: `201`
 
 --- 
 
-## Retornar Candidatos
+### Retornar Candidatos
 
 Request
 
