@@ -6,7 +6,7 @@ module V1
                 return render_unprocessable_entity_response person
             end
             
-            render json: {status: 'success', data: person}, status: :ok
+            render json: {status: 'success', data: person}, status: :created
         end
 
         private

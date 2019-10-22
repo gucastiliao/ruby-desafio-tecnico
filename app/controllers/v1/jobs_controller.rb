@@ -6,7 +6,7 @@ module V1
                 return render_unprocessable_entity_response job
             end
 
-            render json: {status: 'success', data: job}, status: :ok
+            render json: {status: 'success', data: job}, status: :created
         end
 
         def ranking

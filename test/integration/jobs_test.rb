@@ -6,7 +6,7 @@ class JobsTest < ActionDispatch::IntegrationTest
         params: { empresa: "Teste2", titulo: "Vaga teste", descricao: "Criar os mais diferentes tipos de teste", localizacao: "A", nivel: 5 }
         json_response = JSON.parse(response.body)
         
-        assert_response :success
+        assert_response :created
         assert_equal "Teste2", json_response["data"]["empresa"]
     end
 

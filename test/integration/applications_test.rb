@@ -6,7 +6,7 @@ class ApplicationsTest < ActionDispatch::IntegrationTest
         params: { id_pessoa: people(:person_level_5).id, id_vaga: jobs(:job_nivel_5).id }
         json_response = JSON.parse(response.body)
        
-        assert_response :success
+        assert_response :created
         assert_equal people(:person_level_5).id, json_response["data"]["pessoa"]["id"]
         assert_equal jobs(:job_nivel_5).id, json_response["data"]["vaga"]["id"]
     end
@@ -25,10 +25,10 @@ class ApplicationsTest < ActionDispatch::IntegrationTest
         params: { id_pessoa: people(:person_level_5).id, id_vaga: jobs(:job_nivel_5).id }
         json_response = JSON.parse(response.body)
         
-        assert_response :success
+        assert_response :created
         assert_equal people(:person_level_5).id, json_response["data"]["pessoa"]["id"]
         assert_equal jobs(:job_nivel_5).id, json_response["data"]["vaga"]["id"]
-        assert_equal 75, json_response["data"]["score"]
+        assert_equal 75, json_response["data"]["pessoa"]["score"]
     end
 
     test "can create application and generate score with value 50" do
@@ -36,9 +36,9 @@ class ApplicationsTest < ActionDispatch::IntegrationTest
         params: { id_pessoa: people(:person_level_3).id, id_vaga: jobs(:job_nivel_5).id }
         json_response = JSON.parse(response.body)
         
-        assert_response :success
+        assert_response :created
         assert_equal people(:person_level_3).id, json_response["data"]["pessoa"]["id"]
         assert_equal jobs(:job_nivel_5).id, json_response["data"]["vaga"]["id"]
-        assert_equal 50, json_response["data"]["score"]
+        assert_equal 50, json_response["data"]["pessoa"]["score"]
     end
 end
